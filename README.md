@@ -137,11 +137,13 @@ DIVIDE(
 
 ### Executive Sales Dashboard
 
-<img width="947" height="580" alt="1" src="https://github.com/user-attachments/assets/a2acad9b-5493-4e92-a5f0-dae238f413d9" />
+<img width="1136" height="693" alt="image" src="https://github.com/user-attachments/assets/0ae1cd41-14cd-4276-8cb5-75522c5eb99b" />
+
 
 ### Product Insights Dashboard
 
-<img width="1320" height="721" alt="2" src="https://github.com/user-attachments/assets/f076424d-7b62-4bf0-ae9d-13b1bb590d9e" />
+<img width="1455" height="801" alt="image" src="https://github.com/user-attachments/assets/551c3f98-69f4-4c7a-9b49-b9895b741a05" />
+
 
 ---
 
