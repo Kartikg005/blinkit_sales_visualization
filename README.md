@@ -153,7 +153,7 @@ Blinkit-PowerBI-Dashboard/
 ├── Blinkit Dashboard.pbix
 ├── Blinkit Dataset.xlsx
 ├── Dashboard Screenshots/
-│   ├── Executive Dashboard.png
+│   ├── Executive Sales Dashboard.png
 │   └── Product Insights Dashboard.png
 └── README.md
 ```
