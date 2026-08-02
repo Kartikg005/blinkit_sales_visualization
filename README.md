@@ -131,13 +131,11 @@ Average Sales = AVERAGE('BlinkIT'[Sales])
 
 ### Executive Sales Dashboard
 
-<img width="1136" height="693" alt="image" src="https://github.com/user-attachments/assets/0ae1cd41-14cd-4276-8cb5-75522c5eb99b" />
-
+<img width="1185" height="725" alt="Executive Sales Dashboard" src="https://github.com/user-attachments/assets/4eac4a24-0dd6-442c-8b28-d4afa5ed04d9" />
 
 ### Product Insights Dashboard
 
-<img width="1455" height="801" alt="image" src="https://github.com/user-attachments/assets/551c3f98-69f4-4c7a-9b49-b9895b741a05" />
-
+<img width="1341" height="735" alt="Product Insights Dashboard" src="https://github.com/user-attachments/assets/91315eba-9db1-495a-b429-6f739f1dbd69" />
 
 ---
 
