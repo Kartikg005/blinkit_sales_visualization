@@ -24,7 +24,6 @@ The main objectives of this project are to:
 
 * Microsoft Power BI Desktop
 * Power Query
-* DAX (Data Analysis Expressions)
 
 ---
 
@@ -124,11 +123,6 @@ Total Outlets = DISTINCTCOUNT('BlinkIT'[Outlet Identifier])
 
 Average Sales = AVERAGE('BlinkIT'[Sales])
 
-Revenue % =
-DIVIDE(
-    [Total Sales],
-    CALCULATE([Total Sales], ALL('BlinkIT'))
-)
 ```
 
 ---
@@ -152,11 +146,11 @@ DIVIDE(
 ```text
 Blinkit-PowerBI-Dashboard/
 │
-├── Blinkit Dashboard.pbix
-├── Blinkit Dataset.xlsx
 ├── Dashboard Screenshots/
 │   ├── Executive Sales Dashboard.png
 │   └── Product Insights Dashboard.png
+├── Blinkit Dashboard.pbix
+├── Blinkit Dataset.xlsx
 └── README.md
 ```
 
@@ -185,17 +179,6 @@ Blinkit-PowerBI-Dashboard/
 
 ---
 
-## 🚀 Future Improvements
-
-Some features that can be added in future versions include:
-
-* Sales forecasting
-* Monthly and yearly trend analysis
-* Customer segmentation
-* Publishing the dashboard to Power BI Service
-* Row-Level Security (RLS)
-
----
 
 ## 👨‍💻 Author
 
@@ -207,7 +190,6 @@ Aspiring Data Analyst
 
 * Power BI
 * Excel
-* SQL
 * Python
 * Pandas
 * NumPy
