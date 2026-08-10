@@ -1,4 +1,4 @@
-# 📊 Blinkit Sales Analysis Dashboard Using Power BI
+# 📊 Blinkit Sales and Products Analysis Dashboard
 
 ## 📌 Project Overview
 
@@ -27,9 +27,6 @@ The main objectives of this project are to:
 
 * Microsoft Power BI Desktop
 * Power Query Editor
-* DAX
-* Star Schema Data Model
-* Power BI Slicers & Filters
 
 Power BI was used for report design and visualization, Power Query for data transformation, DAX for KPI calculations, and the Star Schema for managing relationships between fact and dimension tables.
 
