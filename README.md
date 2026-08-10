@@ -2,9 +2,11 @@
 
 ## 📌 Project Overview
 
-This project is an interactive **Blinkit Sales Analysis Dashboard** created using **Microsoft Power BI**. The aim of the project is to transform raw sales data into meaningful business insights that can support better decision-making.
+This project is an interactive **Blinkit Sales & Product Analysis Dashboard** created using **Microsoft Power BI**. The aim of the project is to transform retail sales data into meaningful business insights that can support better and faster decision-making.
 
-The dashboard focuses on analyzing sales performance, outlet performance, customer ratings, product visibility, and revenue distribution through interactive reports and visualizations. Power Query was used for data cleaning, and DAX measures were created to calculate important business metrics.
+The dashboard brings together **sales, product, and outlet data** into a single analytical view. It focuses on analyzing sales performance, product performance, outlet performance, customer ratings, and product visibility through interactive reports and visualizations.
+
+**Power Query** was used for data cleaning and transformation, a **Star Schema** was used for data modeling, and **DAX** measures were created for key business calculations.
 
 ---
 
@@ -12,42 +14,52 @@ The dashboard focuses on analyzing sales performance, outlet performance, custom
 
 The main objectives of this project are to:
 
-* Analyze overall sales performance.
-* Compare the performance of different outlet types and locations.
-* Identify top-performing product categories.
-* Study customer ratings and product visibility.
-* Build an interactive dashboard that allows users to filter and explore data easily.
+* Analyze overall retail sales performance.
+* Consolidate sales, product, and outlet data into a clean data model.
+* Calculate important business metrics such as Total Sales, Average Ratings, and Average Visibility.
+* Identify top-performing product categories and outlet types.
+* Analyze the relationship between product visibility and sales performance.
+* Provide interactive filters to explore data by outlet type, outlet size, and location.
 
 ---
 
 ## 🛠️ Tools Used
 
 * Microsoft Power BI Desktop
-* Power Query
+* Power Query Editor
+* DAX
+* Star Schema Data Model
+* Power BI Slicers & Filters
+
+Power BI was used for report design and visualization, Power Query for data transformation, DAX for KPI calculations, and the Star Schema for managing relationships between fact and dimension tables.
 
 ---
 
 ## 📂 Dataset
 
-The dataset used for this project was downloaded from Kaggle.
+The dashboard uses retail sales, product, and outlet-level data.
 
-**Dataset Source:**
-https://www.kaggle.com/datasets/architgoel29/blinkit-dashboard
+The data model contains:
+
+* **Fact_sales** – transactional sales records.
+* **Dim_Product** – product-level information such as Item Type, Fat Content, and Visibility.
+* **Dim_outlet** – outlet-level information such as Outlet Size, Location Type, and Establishment Year.
 
 ---
 
 ## 🧹 Data Cleaning
 
-Before creating the dashboard, the dataset was cleaned using Power Query. The following steps were performed:
+The data was prepared using **Power Query** before developing the dashboard.
 
-* Corrected data types
-* Standardized inconsistent values
-* Handled missing values
-* Replaced invalid visibility values
-* Removed duplicate records
-* Renamed columns for better readability
+The main data preparation process included:
 
-These steps ensured the dataset was accurate and ready for analysis.
+* Data cleaning
+* Data shaping
+* Data transformation
+* Preparing fields for analysis
+* Creating a structured data model
+
+Power Query was used as the main data preparation layer before loading the data into the Power BI model.
 
 ---
 
@@ -55,75 +67,70 @@ These steps ensured the dataset was accurate and ready for analysis.
 
 ## Page 1 – Executive Sales Dashboard
 
-This page provides a high-level overview of Blinkit's business performance.
+This page provides a high-level overview of business performance and answers the question:
+
+> **"Where is the business generating revenue from?"**
 
 ### KPI Cards
 
-* Total Sales
-* Average Rating
-* Total Products
-* Number of Outlets
-* Average Item Visibility
+* Total Sales – **1.20M**
+* Average Ratings – **3.92**
+* Total Products – **2K**
+* Number of Outlets – **10**
+* Average Visibility – **7.02%**
 
 ### Visualizations
 
-* Sales by Outlet Type
 * Sales by Item Type
 * Sales by Outlet Size
 * Sales by Outlet Location Type
-* Outlet Establishment Year vs Sales
+* Sales by Outlet Establishment Year
+* Sales by Outlet Type
 
 ### Slicers
 
-* Outlet Size
 * Outlet Type
-* Item Fat Content
-* Outlet Location
+* Outlet Size
+* Location Type
 * Item Type
 
 ---
 
 ## Page 2 – Product Insights Dashboard
 
-The second page focuses on product performance and customer insights.
+The second page focuses on deeper product-level analysis and answers the question:
 
-### KPI Cards
-
-* Total Sales
-* Average Rating
-* Total Products
-* Number of Outlets
-* Average Item Visibility
+> **"Why are certain sales patterns occurring?"**
 
 ### Visualizations
 
-* Item Visibility vs Sales
-* Top 10 Products by Visibility
+* Item Visibility vs Total Sales
 * Revenue by Item Type
-* Average Rating by Item Type
 * Fat Content vs Sales
 * Outlet Size vs Average Rating
+* Top 10 Products by Visibility
 
 ---
 
 ## 📈 DAX Measures
 
-The following DAX measures were used in the dashboard:
+The dashboard uses calculated measures for the main business KPIs:
 
 ```DAX
-Total Sales = SUM('BlinkIT'[Sales])
+Total Sales
 
-Average Rating = AVERAGE('BlinkIT'[Rating])
+Average Ratings
 
-Average Visibility = AVERAGE('BlinkIT'[Item Visibility])
+Total Products
 
-Total Products = DISTINCTCOUNT('BlinkIT'[Item Identifier])
+Number of Outlets
 
-Total Outlets = DISTINCTCOUNT('BlinkIT'[Outlet Identifier])
+Average Visibility
 
-Average Sales = AVERAGE('BlinkIT'[Sales])
-
+Avg Sales
 ```
+
+These measures are used to power the KPI cards and visualizations throughout the report.
 
 ---
 
@@ -131,11 +138,13 @@ Average Sales = AVERAGE('BlinkIT'[Sales])
 
 ### Executive Sales Dashboard
 
-<img width="1147" height="707" alt="image" src="https://github.com/user-attachments/assets/19752983-d9dd-4f72-a883-daa22d48ec0e" />
+<img width="1362" height="737" alt="image" src="https://github.com/user-attachments/assets/c997bcd6-c83b-4b4d-bc9a-82c76b1f6fc3" />
+
 
 ### Product Insights Dashboard
 
-<img width="1286" height="712" alt="image" src="https://github.com/user-attachments/assets/dd5cb08e-593c-4e4e-bf75-b983efe8631a" />
+<img width="1357" height="740" alt="image" src="https://github.com/user-attachments/assets/60e91a5d-b221-403e-8d5a-9fe8d19f1821" />
+
 
 ---
 
@@ -147,8 +156,11 @@ Blinkit-PowerBI-Dashboard/
 ├── Dashboard Screenshots/
 │   ├── Executive Sales Dashboard.png
 │   └── Product Insights Dashboard.png
+│
 ├── Blinkit Dashboard.pbix
+│
 ├── Blinkit Dataset.xlsx
+│
 └── README.md
 ```
 
@@ -156,11 +168,11 @@ Blinkit-PowerBI-Dashboard/
 
 ## 📌 Key Insights
 
-* Compared sales across different outlet types and locations.
-* Identified the best-performing product categories.
-* Analyzed customer ratings to understand product satisfaction.
-* Studied the relationship between product visibility and sales.
-* Built an interactive dashboard with slicers for better data exploration.
+* A small number of item categories contribute a large share of total sales.
+* Outlet size and location type have a visible influence on sales performance.
+* Product visibility does not have a strictly linear relationship with sales.
+* Some low-visibility products still perform well, showing that factors such as pricing and category demand can also influence sales.
+* Average customer ratings remain relatively consistent at around **3.9** across most outlet sizes.
 
 ---
 
@@ -168,28 +180,32 @@ Blinkit-PowerBI-Dashboard/
 
 * Data Cleaning
 * Power Query
+* Data Transformation
 * Data Modeling
+* Star Schema
 * DAX
 * KPI Development
 * Data Visualization
 * Dashboard Design
 * Business Intelligence
+* Interactive Reporting
 
 ---
-
 
 ## 👨‍💻 Author
 
 **Kartik G**
 
-Aspiring Data Analyst
+**Aspiring Data Analyst**
 
 ### Skills
 
 * Power BI
+* Power Query
+* DAX
 * Excel
 * Python
 * Pandas
 * NumPy
-
-If you like this project, feel free to ⭐ the repository.
+* Data Visualization
+* Data Analysis
